@@ -7,9 +7,6 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [addition, setAddition] = useState("");
 
-  const something = document.getElementById("todo-1");
-  console.log(something);
-
   useEffect(() => {
     Axios.get("http://localhost:3000/api/todo/get/").then(response => {
       setTodos(response.data.data);
